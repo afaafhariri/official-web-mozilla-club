@@ -2,27 +2,29 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
 
+  // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      // If the user has scrolled even slightly, set isScrolled to true
       setIsScrolled(window.scrollY > 0)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Detect current path
+  const pathname = usePathname()
+
+  // Helper to check if link is active
+  const isActive = (path: string) => pathname === path
+
   return (
     <nav
-      // Sticky positions the element relative to its nearest scrolling ancestor
-      // top-0 keeps it pinned to the top
-      // z-50 ensures it stays above most other elements
-      // Also, conditionally apply classes based on scroll state
       className={`sticky top-0 z-50 border-b transition-colors 
         ${isScrolled ? "shadow-md bg-white/80 backdrop-blur-sm" : "bg-white"}
       `}
@@ -35,20 +37,103 @@ export function Navbar() {
             className="h-6 w-auto"
           />
         </Link>
+
         <div className="ml-auto flex items-center space-x-6">
-          <Link href="/about" className="text-sm font-semibold transition-colors hover:text-primary">
-            About
-          </Link>
-          <Link href="/events" className="text-sm font-semibold transition-colors hover:text-primary">
-            Events
-          </Link>
-          <Link href="/blog" className="text-sm font-semibold transition-colors hover:text-primary">
-            Blog
-          </Link>
-          <Link href="/contact" className="text-sm font-semibold transition-colors hover:text-primary">
-            Contact Us
-          </Link>
-          <Button>Join SLIIT Mozilla!</Button>
+          <div className="relative group inline-block">
+            <Link
+              href="/about"
+              className={`
+                text-sm font-medium transition-colors
+                ${isActive("/about") ? "font-bold text-black" : "hover:text-primary"}
+                `}
+            >
+              About
+            </Link>
+            <span
+              className="
+                absolute left-0 bottom-0
+                h-[2px] w-0
+                bg-current
+                group-hover:w-full
+                transition-all duration-300
+              "
+            />
+          </div>
+
+          <div className="relative group inline-block">
+            <Link
+              href="/events"
+              className={`
+                text-sm font-medium transition-colors
+                ${isActive("/events") ? "font-bold text-black" : "hover:text-primary"}
+              `}
+            >
+              Events
+            </Link>
+            <span
+              className="
+                absolute left-0 bottom-0
+                h-[2px] w-0
+                bg-current
+                group-hover:w-full
+                transition-all duration-300
+              "
+            />
+          </div>
+
+          <div className="relative group inline-block">
+            <Link
+              href="/blog"
+              className={`
+                text-sm font-medium transition-colors
+                ${isActive("/blog") ? "font-bold text-black" : "hover:text-primary"}
+              `}
+            >
+              Blog
+            </Link>
+            <span
+              className="
+                absolute left-0 bottom-0
+                h-[2px] w-0
+                bg-current
+                group-hover:w-full
+                transition-all duration-300
+              "
+            />
+          </div>
+
+          <div className="relative group inline-block">
+            <Link
+              href="/contact"
+              className={`
+                text-sm font-medium transition-colors
+                ${isActive("/contact") ? "font-bold text-black" : "hover:text-primary"}
+              `}
+            >
+              Contact Us
+            </Link>
+            <span
+              className="
+                absolute left-0 bottom-0
+                h-[2px] w-0
+                bg-current
+                group-hover:w-full
+                transition-all duration-300
+              "
+            />
+          </div>
+
+          <Button
+            className="
+              border border-transparent
+              transition-colors duration-300
+              hover:border-black
+              hover:bg-white
+              hover:text-black
+            "
+          >
+            Join SLIIT Mozilla!
+          </Button>
         </div>
       </div>
     </nav>
