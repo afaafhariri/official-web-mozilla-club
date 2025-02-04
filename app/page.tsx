@@ -17,22 +17,45 @@ export default function Home() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Areas of Focus</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 border rounded-lg text-center">
+          <div className="p-6 border rounded-lg text-center
+                          transition-all duration-300
+                          hover:shadow-lg hover:-translate-y-1
+                          hover:border-orange-600
+                          cursor-pointer"
+          >
             <Code2 className="h-12 w-12 mx-auto mb-4 stroke-orange-600" />
             <h3 className="text-orange-600 font-bold mb-2">Web Technologies</h3>
             <p className="text-gray-600">Explore modern web development and open standards</p>
           </div>
-          <div className="p-6 border rounded-lg text-center">
+
+          <div className="p-6 border rounded-lg text-center
+                          transition-all duration-300
+                          hover:shadow-lg hover:-translate-y-1
+                          hover:border-orange-600
+                          cursor-pointer"
+          >
             <Users className="h-12 w-12 mx-auto mb-4 stroke-orange-600" />
             <h3 className="text-orange-600 font-bold mb-2">Community Building</h3>
             <p className="text-gray-600">Connect with like-minded tech enthusiasts</p>
           </div>
-          <div className="p-6 border rounded-lg text-center">
+
+          <div className="p-6 border rounded-lg text-center
+                          transition-all duration-300
+                          hover:shadow-lg hover:-translate-y-1
+                          hover:border-orange-600
+                          cursor-pointer"
+          >
             <Rocket className="h-12 w-12 mx-auto mb-4 stroke-orange-600" />
             <h3 className="text-orange-600 font-bold mb-2">Innovation</h3>
             <p className="text-gray-600">Create impactful solutions for real-world problems</p>
           </div>
-          <div className="p-6 border rounded-lg text-center">
+
+          <div className="p-6 border rounded-lg text-center
+                          transition-all duration-300
+                          hover:shadow-lg hover:-translate-y-1
+                          hover:border-orange-600
+                          cursor-pointer"
+          >
             <Brain className="h-12 w-12 mx-auto mb-4 stroke-orange-600" />
             <h3 className="text-orange-600 font-bold mb-2">Learning</h3>
             <p className="text-gray-600">Continuous learning and skill development</p>
@@ -44,17 +67,53 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Why Join Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            {/* Card 1 */}
+            <div
+              className="
+                bg-white p-6 rounded-lg shadow-sm 
+                transition-all duration-300 
+                hover:bg-orange-50 hover:shadow-md 
+                cursor-pointer
+              "
+            >
+              {/* Asterisk / star aligned left */}
+              <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
               <h3 className="text-orange-600 font-bold mb-2">Skill Development</h3>
-              <p className="text-gray-600">Enhance your technical skills through workshops and hands-on projects</p>
+              <p className="text-gray-600">
+                Enhance your technical skills through workshops and hands-on projects
+              </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+
+            {/* Card 2 */}
+            <div
+              className="
+                bg-white p-6 rounded-lg shadow-sm 
+                transition-all duration-300 
+                hover:bg-orange-50 hover:shadow-md 
+                cursor-pointer
+              "
+            >
+              <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
               <h3 className="text-orange-600 font-bold mb-2">Networking</h3>
-              <p className="text-gray-600">Connect with industry professionals and like-minded students</p>
+              <p className="text-gray-600">
+                Connect with industry professionals and like-minded students
+              </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+
+            {/* Card 3 */}
+            <div
+              className="
+                bg-white p-6 rounded-lg shadow-sm 
+                transition-all duration-300 
+                hover:bg-orange-50 hover:shadow-md 
+                cursor-pointer
+              "
+            >
+              <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
               <h3 className="text-orange-600 font-bold mb-2">Opportunities</h3>
-              <p className="text-gray-600">Access to exclusive events, internships, and career opportunities</p>
+              <p className="text-gray-600">
+                Access to exclusive events, internships, and career opportunities
+              </p>
             </div>
           </div>
         </div>
