@@ -15,7 +15,7 @@ export function Footer() {
             <h3 className="font-bold mb-4">Mozilla Campus Club of SLIIT</h3>
             <p className="text-sm text-gray-600">
               Empowering students through open source technology and innovation.
-              <br/>#welovetech! 🦊❤️
+              <br/><b>#welovetech!</b> 🦊❤️
             </p>
           </div>
 

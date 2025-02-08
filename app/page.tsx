@@ -12,6 +12,7 @@ export default function Home() {
         </div>
       </section>
       
+      <MovingBanner text="Join Mozilla Campus Club SLIIT - Where Innovation Meets Open Source 🚀" />
       
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Areas of Focus</h2>
@@ -108,6 +109,51 @@ export default function Home() {
               <h3 className="text-orange-600 font-bold mb-2">Opportunities</h3>
               <p className="text-gray-600">
                 Access to exclusive events, internships, and career opportunities
+              </p>
+            </div>
+
+            <div
+              className="
+                bg-white p-6 rounded-lg shadow-sm 
+                transition-all duration-300 
+                hover:bg-orange-50 hover:shadow-md 
+                cursor-pointer
+              "
+            >
+              <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
+              <h3 className="text-orange-600 font-bold mb-2">Community</h3>
+              <p className="text-gray-600">
+                Engage with a supportive network of peers, mentors, and tech enthusiasts eager to share knowledge.
+              </p>
+            </div>
+
+            <div
+              className="
+                bg-white p-6 rounded-lg shadow-sm 
+                transition-all duration-300 
+                hover:bg-orange-50 hover:shadow-md 
+                cursor-pointer
+              "
+            >
+              <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
+              <h3 className="text-orange-600 font-bold mb-2">Leadership Growth</h3>
+              <p className="text-gray-600">
+                Hone your organizational and communication skills by leading events, hackathons, and team projects.
+              </p>
+            </div>
+
+            <div
+              className="
+                bg-white p-6 rounded-lg shadow-sm 
+                transition-all duration-300 
+                hover:bg-orange-50 hover:shadow-md 
+                cursor-pointer
+              "
+            >
+              <span className="text-orange-600 text-2xl block text-left mb-2">⁕</span>
+              <h3 className="text-orange-600 font-bold mb-2">Mentorship & Guidance</h3>
+              <p className="text-gray-600">
+                Learn from experienced developers and alumni who can help you navigate your tech career.
               </p>
             </div>
           </div>
