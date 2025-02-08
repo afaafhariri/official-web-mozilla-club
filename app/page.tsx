@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import JoinButton from "@/components/ui/JoinButton";
 import { MovingBanner } from "@/components/ui/moving-banner"
 import { Code2, Users, Rocket, Brain } from "lucide-react"
 
@@ -130,7 +130,7 @@ export default function Home() {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Be part of a community that's passionate about technology, innovation, and making a difference in internet security.
           </p>
-          <Button size="lg">Join Us!</Button>
+          <JoinButton />
         </div>
       </section>
     </div>

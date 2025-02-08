@@ -68,9 +68,12 @@ export function Navbar() {
               hover:bg-white
               hover:text-black
             "
-          >
+            onClick={() => {
+              window.open("https://bit.ly/sliitmozilla-member-registrations", "_blank")
+            }}
+            >
             Join SLIIT Mozilla!
-          </Button>
+            </Button>
         </div>
 
         {/* --- Hamburger / Close Btn for Mobile --- */}
@@ -140,6 +143,9 @@ export function Navbar() {
               hover:bg-white
               hover:text-black
             "
+            onClick={() => {
+              window.open("https://bit.ly/sliitmozilla-member-registrations", "_blank")
+            }}
           >
             Join SLIIT Mozilla!
           </Button>
