@@ -2,13 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-
 import { SplashScreen } from "./SplashScreen";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 import { FoxAnimations } from "@/components/FoxAnimations";
-import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const senderAccountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -50,7 +48,7 @@ export default function RootLayout({
             a.src = d;
             m.parentNode.insertBefore(a, m)
           })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-          sender('0f7b6a9bcf6561'); //sender-id(same for all)
+          sender('${senderAccountId}');
         `}
         </Script>
       </body>

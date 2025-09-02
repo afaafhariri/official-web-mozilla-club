@@ -4,6 +4,7 @@ import SenderInit from "@/components/ui/SenderInit";
 import { Code2, Users, Rocket, Brain } from "lucide-react";
 
 export default function Home() {
+  const senderFormId = process.env.NEXT_PUBLIC_SENDER_FORM_ID;
   return (
     <div>
       <section className="py-24 bg-primary text-primary-foreground">
@@ -223,10 +224,10 @@ export default function Home() {
             Get updates about events, workshops, and club news straight to your
             inbox.
           </p>
-          {/*form id*/}
+          {/* Sender form container; id comes from env */}
           <div
             className="sender-form-field"
-            data-sender-form-id="mf2rev3ae9rjqysj2c4"
+            data-sender-form-id={senderFormId}
           ></div>
           <SenderInit />
         </div>
