@@ -24,24 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script id="sender-universal" strategy="afterInteractive">
-          {`
-          (function (s, e, n, d, er) {
-            s['Sender'] = er;
-            s[er] = s[er] || function () {
-              (s[er].q = s[er].q || []).push(arguments)
-            }, s[er].l = 1 * new Date();
-            var a = e.createElement(n),
-                m = e.getElementsByTagName(n)[0];
-            a.async = 1;
-            a.src = d;
-            m.parentNode.insertBefore(a, m)
-          })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-          sender('0f7b6a9bcf6561');
-        `}
-        </Script>
-      </head>
       <body
         className={`${inter.className} antialiased`}
         suppressHydrationWarning
@@ -55,6 +37,22 @@ export default function RootLayout({
 
           <Footer />
         </div>
+        <Script id="sender-universal" strategy="afterInteractive">
+          {`
+          (function (s, e, n, d, er) {
+            s['Sender'] = er;
+            s[er] = s[er] || function () {
+              (s[er].q = s[er].q || []).push(arguments)
+            }, s[er].l = 1 * new Date();
+            var a = e.createElement(n),
+                m = e.getElementsByTagName(n)[0];
+            a.async = 1;
+            a.src = d;
+            m.parentNode.insertBefore(a, m)
+          })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+          sender('0f7b6a9bcf6561'); //sender-id(same for all)
+        `}
+        </Script>
       </body>
     </html>
   );

@@ -223,7 +223,11 @@ export default function Home() {
             Get updates about events, workshops, and club news straight to your
             inbox.
           </p>
-          <div className="sender-form-field" data-sender-form-id="mf2rev3ae9rjqysj2c4"></div>
+          {/*form id*/}
+          <div
+            className="sender-form-field"
+            data-sender-form-id="mf2rev3ae9rjqysj2c4"
+          ></div>
           <SenderInit />
         </div>
       </section>
