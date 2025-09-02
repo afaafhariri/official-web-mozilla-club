@@ -1,4 +1,4 @@
-import JoinButton from "@/components/ui/JoinButton";
+import NewsletterForm from "@/components/ui/NewsletterForm";
 import { MovingBanner } from "@/components/ui/moving-banner"
 import { Code2, Users, Rocket, Brain } from "lucide-react"
 
@@ -172,11 +172,11 @@ export default function Home() {
 
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Become a member</h2>
+          <h2 className="text-3xl font-bold mb-4">Subscribe to our newsletter</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Be part of a community that's passionate about technology, innovation, and making a difference in internet security.
+            Get updates about events, workshops, and club news straight to your inbox.
           </p>
-          <JoinButton />
+          <NewsletterForm />
         </div>
       </section>
     </div>
