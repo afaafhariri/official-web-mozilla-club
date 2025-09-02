@@ -222,7 +222,7 @@ export default function Home() {
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Get updates about events, workshops, and club news straight to your
-            inbox.
+            inbox and stay updated.
           </p>
           {/* Sender form container; id comes from env */}
           <div
