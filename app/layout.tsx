@@ -1,31 +1,24 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Script from "next/script";
-import { SplashScreen } from "./SplashScreen";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { FoxAnimations } from "@/components/FoxAnimations";
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import Script from "next/script"
+import { SplashScreen } from "./SplashScreen"
+import { Navbar } from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
+import { FoxAnimations } from "@/components/FoxAnimations"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Mozilla Campus Club SLIIT",
   description: "Official website of Mozilla Campus Club at SLIIT",
-};
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const senderAccountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;  
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const senderAccountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} antialiased`}
-        suppressHydrationWarning
-      >
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <div className="min-h-screen flex flex-col overflow-x-hidden">
           <Navbar />
           <SplashScreen>
@@ -53,5 +46,5 @@ export default function RootLayout({
         </Script>
       </body>
     </html>
-  );
+  )
 }
