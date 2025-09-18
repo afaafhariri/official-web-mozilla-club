@@ -1,8 +1,7 @@
-// Sender form embed will render here via their universal script
 import { MovingBanner } from "@/components/ui/moving-banner";
 import SenderInit from "@/components/ui/SenderInit";
-import { Code2, Users, Rocket, Brain } from "lucide-react";
-
+import { Code2, Users, Rocket, Brain } from "lucide-react"
+        
 export default function Home() {
   const senderFormId = process.env.NEXT_PUBLIC_SENDER_FORM_ID;
   return (
@@ -179,7 +178,6 @@ export default function Home() {
                 events, hackathons, and team projects.
               </p>
             </div>
-
             <div
               className="
                 bg-white p-6 rounded-lg shadow-sm 

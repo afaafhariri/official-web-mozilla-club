@@ -19,7 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const senderAccountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;
+  const senderAccountId = process.env.NEXT_PUBLIC_SENDER_ACCOUNT_ID;  
   return (
     <html lang="en" suppressHydrationWarning>
       <body
